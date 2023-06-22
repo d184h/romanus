@@ -23,7 +23,6 @@ function Registration(): JSX.Element {
       body: JSON.stringify({ name, email, password, cpassword }),
     });
     const data = await res.json();
-    console.log(data, '<<<<<<<<<<<<<<<<<<<');
 
     dispatch({ type: 'auth/reg', payload: data });
     navigate('/');

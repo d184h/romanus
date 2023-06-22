@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../redux/store';
 
 function NavBar(): JSX.Element {
-  const { user } = useSelector((store: RootState) => store.auth);
+  const { user } = useSelector((store: RootState) => store.authReducer);
   const dispatch = useDispatch();
 
   const onHandleLogOut: React.MouseEventHandler<HTMLAnchorElement> = async (
