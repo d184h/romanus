@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function MainPage(): JSX.Element {
   return (
     <div>
-      <h1>Priv</h1>
+      <h1>Pr</h1>
     </div>
   );
 }
