@@ -1,3 +1,6 @@
+
+import * as api from "./api";
+import ThemesList from "../features/Themes/ThemesList";
 import React, { useEffect } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
@@ -9,9 +12,15 @@ import Registration from '../features/auth/Registration';
 import Login from '../features/auth/Login';
 import MainPage from '../features/MainPage/components/MainPage';
 
+
 function App(): JSX.Element {
   const dispatch = useDispatch();
   useEffect(() => {
+
+    api.goFetch().then((data) => dispatch({ type: "theme/go", payload: data }));
+  }, []);
+  
+ useEffect(() => {
     fetch('/api/auth/check')
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'auth/check', payload: data }));
@@ -27,6 +36,7 @@ function App(): JSX.Element {
         </Route>
         {/* <Route path="*" element={<Error />} /> */}
       </Routes>
+
     </div>
   );
 }
