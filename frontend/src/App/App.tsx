@@ -14,7 +14,7 @@ import MainPage from '../features/MainPage/components/MainPage';
 import CardPage from '../features/CardPage/components/CardPage';
 
 function App(): JSX.Element {
-  // const [show, setShow] = useState(false);
+ 
 
   const dispatch = useDispatch();
   useEffect(() => {
