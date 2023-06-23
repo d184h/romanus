@@ -66,7 +66,7 @@ router.get('/check', async (req, res) => {
       const user = await User.findOne({ where: { id: req.session.userId } });
       res.json(user);
     }
-    res.end();
+    res.json({});
   } catch ({ message }) {
     res.json({ message });
   }

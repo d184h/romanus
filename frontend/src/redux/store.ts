@@ -8,7 +8,7 @@ import themeReducer from "./reducers/themeReducer";
 import authReducer from "./reducers/authReducer";
 
 const store = createStore(
-  combineReducers({ rootReducer, themeReducer, authReducer }),
+  combineReducers({ rootReducer, themeReducer, authReducer,answe }),
   composeWithDevTools()
 );
 
