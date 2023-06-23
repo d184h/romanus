@@ -6,11 +6,13 @@ import ThemesItem from "./ThemeItem";
 function ThemesList(): JSX.Element {
   const { themes } = useSelector((store: RootState) => store.themeReducer);
   return (
-    <div>
-      {themes.map((theme) => (
-        <ThemesItem theme={theme} key={theme.id} />
-      ))}
-    </div>
+    <>
+      <div>
+        {themes.map((theme) => (
+          <ThemesItem theme={theme} key={theme.id} />
+        ))}
+      </div>
+    </>
   );
 }
 
