@@ -1,8 +1,8 @@
 import { Action } from '../../App/types/Action';
 import { Answer } from '../../features/CardPage/types/Answer';
 
-const initialState: AuthState = {
-  user: undefined,
+const initialState: Answer = {
+  answer: '',
 };
 
 const answerReducer = (
