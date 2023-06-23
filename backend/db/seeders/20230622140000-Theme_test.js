@@ -3,7 +3,7 @@ module.exports = {
   async up(queryInterface) {
     const themesData = [
       {
-        name: 'Название темы 1',
+        name: 'Гагик',
       },
       {
         name: 'Название темы 2',

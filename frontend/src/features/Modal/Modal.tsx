@@ -16,6 +16,7 @@ function Modal({
   show: any;
   setShow: (value: boolean) => void;
 }): JSX.Element {
+
   const [answer, setAnswer] = useState('');
   // const dispatch = useDispatch();
   const questId = useParams();
@@ -33,6 +34,7 @@ function Modal({
     // dispatch({ type: 'answer/check', payload: data });
     console.log(data);
   };
+
 
   return (
     <div>
