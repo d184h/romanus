@@ -5,7 +5,7 @@ function ThemesItem({ theme }: { theme: Theme }): JSX.Element {
   return (
     <div>
       {theme.name}
-      {theme.Questions.map((question) => question.question)}
+      {theme.Questions.map((question) => question.count)}
     </div>
   );
 }

@@ -2,9 +2,9 @@ export type Theme = {
   tQuestions: any;
   id: number;
   name: string;
-  Questions: Questions[];
+  Questions: Question[];
 };
-export type Questions = {
+export type Question = {
   id: number;
   theme_id: number;
   text: string;
@@ -13,5 +13,5 @@ export type Questions = {
 };
 export type State = {
   themes: Theme[];
-  questions: Questions[];
+  questions: Question[];
 };
