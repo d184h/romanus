@@ -18,20 +18,10 @@ function Modal({
 }): JSX.Element {
   const [answer, setAnswer] = useState('');
   // const dispatch = useDispatch();
+  const [hint, setHint] = useState(false);
   const questId = useParams();
   const onHandleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-
-    const res = await fetch(`/api/answer/${questId}`, {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify({ answer }),
-    });
-    const data = await res.json();
-    // dispatch({ type: 'answer/check', payload: data });
-    console.log(data);
   };
 
   return (
@@ -54,6 +44,10 @@ function Modal({
                 className="answer-input"
                 placeholder="Введите ваш ответ"
               />
+              <button onClick={() => setHint((prev) => !prev)} type="button">
+                подсказка
+              </button>
+              {hint && <img src={question.trueAnswer} alt="hint" />}
               <button type="submit">OTVED</button>
             </div>
           </form>

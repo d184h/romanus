@@ -1,22 +1,14 @@
 const router = require('express').Router();
-const { Answer } = require('../../db/models');
+const { Question } = require('../../db/models');
 
-router.post('/:questId', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const { questId } = req.params;
-
-    const { answer } = req.body;
-    const user_id = req.session.userId;
-
-    const result = await Answer.create({
-      answer,
-      question_id: questId,
-      user_id,
+    const animals = await Question.findAll({
+      raw: true,
     });
-    res.json(result);
+    res.json(animals);
   } catch ({ message }) {
     res.json({ message });
   }
 });
-
 module.exports = router;
