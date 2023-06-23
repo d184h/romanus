@@ -7,7 +7,7 @@ export type Theme = {
 export type Question = {
   id: number;
   theme_id: number;
-  text: string;
+  question: string;
   count: number;
   trueAnswer: string;
 };
