@@ -42,3 +42,17 @@
   padding: 20px;
   font-size: 2rem;
 }
+.theme {
+  display: flex;
+  margin-left: 10%;
+}
+.modal.active {
+  margin-left: 22%;
+}
+.open-btn {
+  background-color: tomato;
+}
+body {
+  margin: auto;
+  background-image: url("https://hrhelpline.ru/wp-content/uploads/2017/07/bbbbbbb-1080x675.jpg");
+}
