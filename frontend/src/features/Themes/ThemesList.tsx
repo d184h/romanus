@@ -5,7 +5,7 @@ import ThemesItem from './ThemeItem';
 
 function ThemesList(): JSX.Element {
   const { themes } = useSelector((store: RootState) => store.themeReducer);
-  console.log(themes);
+//   console.log(themes);
 
   return (
     <div>
