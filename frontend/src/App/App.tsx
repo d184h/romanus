@@ -1,5 +1,5 @@
 import ThemesList from '../features/Themes/ThemesList';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -14,6 +14,8 @@ import MainPage from '../features/MainPage/components/MainPage';
 import CardPage from '../features/CardPage/components/CardPage';
 
 function App(): JSX.Element {
+  // const [show, setShow] = useState(false);
+
   const dispatch = useDispatch();
   useEffect(() => {
     api.goFetch().then((data) => dispatch({ type: 'theme/go', payload: data }));
