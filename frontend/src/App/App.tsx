@@ -29,7 +29,8 @@ function App(): JSX.Element {
     <div className="App">
       <Routes>
         <Route path="/" element={<NavBar />}>
-          <Route index element={<CardPage />} />
+          {/* <Route index element={<CardPage />} /> */}
+          <Route path="/" element={<CardPage />} />
           <Route path="/game" element={<ThemesList />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />

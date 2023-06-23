@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import '../styles/style.css';
-import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+// import { useDispatch } from 'react-redux';
 
 function CardPage(): JSX.Element {
   const [answer, setAnswer] = useState('');
-  const dispatch = useDispatch();
-
+  // const dispatch = useDispatch();
+  const questId = useParams();
   const onHandleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    const res = await fetch('/api/answer', {
+
+    const res = await fetch(`/api/answer/${questId}`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -16,7 +18,8 @@ function CardPage(): JSX.Element {
       body: JSON.stringify({ answer }),
     });
     const data = await res.json();
-    dispatch({ type: 'answer/check', payload: data });
+    // dispatch({ type: 'answer/check', payload: data });
+    console.log(data);
   };
   return (
     <form className="container__card" onSubmit={onHandleSubmit}>
