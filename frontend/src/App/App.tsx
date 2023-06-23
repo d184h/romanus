@@ -9,6 +9,7 @@ import NavBar from '../features/NavBar/components/NavBar';
 // import Error from '../features/404/Error';
 import Registration from '../features/auth/Registration';
 import Login from '../features/auth/Login';
+
 import MainPage from '../features/MainPage/components/MainPage';
 import CardPage from '../features/CardPage/components/CardPage';
 
