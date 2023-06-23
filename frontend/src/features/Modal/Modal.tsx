@@ -16,7 +16,6 @@ function Modal({
   show: any;
   setShow: (value: boolean) => void;
 }): JSX.Element {
-
   const [answer, setAnswer] = useState('');
   // const dispatch = useDispatch();
   const [hint, setHint] = useState(false);
@@ -24,7 +23,6 @@ function Modal({
   const onHandleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
   };
-
 
   return (
     <div>
@@ -38,7 +36,7 @@ function Modal({
         >
           <form className="container__card" onSubmit={onHandleSubmit}>
             <div className="card">
-              <div className="question">{question.question}</div>
+              <img src={question.question} alt="" className="question" />
               <input
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
@@ -47,10 +45,10 @@ function Modal({
                 placeholder="Введите ваш ответ"
               />
               <button onClick={() => setHint((prev) => !prev)} type="button">
-                подсказка
+                Ответ
               </button>
               {hint && <img src={question.trueAnswer} alt="hint" />}
-              <button type="submit">OTVED</button>
+              {/* <button type="submit">OTVED</button> */}
             </div>
           </form>
         </div>
