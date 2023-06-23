@@ -33,3 +33,7 @@
 .modal__content.active {
   transform: scale(1);
 }
+
+img {
+  width: 300px;
+}
