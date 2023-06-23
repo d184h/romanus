@@ -1,5 +1,5 @@
 import ThemesList from '../features/Themes/ThemesList';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -9,9 +9,13 @@ import NavBar from '../features/NavBar/components/NavBar';
 // import Error from '../features/404/Error';
 import Registration from '../features/auth/Registration';
 import Login from '../features/auth/Login';
-// import MainPage from '../features/MainPage/components/MainPage';
+
+import MainPage from '../features/MainPage/components/MainPage';
+import CardPage from '../features/CardPage/components/CardPage';
 
 function App(): JSX.Element {
+  // const [show, setShow] = useState(false);
+
   const dispatch = useDispatch();
   useEffect(() => {
     api.goFetch().then((data) => dispatch({ type: 'theme/go', payload: data }));
@@ -27,7 +31,9 @@ function App(): JSX.Element {
     <div className="App">
       <Routes>
         <Route path="/" element={<NavBar />}>
-          <Route index element={<ThemesList />} />
+          {/* <Route index element={<CardPage />} /> */}
+          <Route path="/" element={<CardPage />} />
+          <Route path="/game" element={<ThemesList />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />
         </Route>

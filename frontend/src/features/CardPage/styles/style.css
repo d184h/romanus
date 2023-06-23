@@ -1,0 +1,37 @@
+.container__card {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f8f8f8; /* Цвет фона карточки */
+  border-radius: 10px; /* Радиус скругления углов карточки */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень карточки */
+  height: 250px;
+  width: 500px;
+}
+
+.question {
+  font-size: 18px; /* Размер шрифта вопроса */
+  font-weight: bold; /* Жирный шрифт для вопроса */
+  margin-bottom: 10px; /* Отступ снизу у вопроса */
+}
+
+.answer-input {
+  width: 95%; /* Ширина поля ввода */
+  padding: 10px; /* Внутренний отступ в поле ввода */
+  border: 1px solid #ccc; /* Граница поля ввода */
+  border-radius: 5px; /* Радиус скругления углов поля ввода */
+}
+
+.answer-input:focus {
+  outline: none; /* Убираем фокусировку при клике на поле ввода */
+  border-color: #4caf50; /* Цвет границы при активном поле ввода */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4); /* Тень при активном поле ввода */
+}
