@@ -9,18 +9,18 @@ function Modal({
   setShow: (value: boolean) => void;
 }): JSX.Element {
   return (
-    // <div className="app">
-    //   <div>
-    //     <button
-    //       type="button"
-    //       className="open-btn"
-    //       onClick={() => setShow(!show)}
-    //     >
-    //       modal
-    //     </button>
-    //   </div>
-    //   <Modal show={show} setShow={setShow} />
-    // </div>
+    <div className="app">
+      <div>
+        <button
+          type="button"
+          className="open-btn"
+          onClick={() => setShow(!show)}
+        >
+          modal
+        </button>
+      </div>
+      {/* <Modal show={show} setShow={setShow} /> */}
+    </div>
 
     <div
       className={show ? 'modal active' : 'modal'}
